@@ -42,6 +42,10 @@
             .dropdown-divider {
                 border-color: #fff;
             }
+            
+            .dropdown-menu{
+                margin-left: -125px;
+            }
 
             .iframe-container {
                 margin: 20px;
