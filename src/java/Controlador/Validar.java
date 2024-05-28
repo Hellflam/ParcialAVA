@@ -25,7 +25,7 @@ public class Validar extends HttpServlet {
             em = edao.validar(user, pass);
             if (em != null) {
                 HttpSession misesion = request.getSession(true);
-                misesion.setAttribute("usuario", em);
+                misesion.setAttribute("user", em);
                 request.getRequestDispatcher("Principal.jsp").forward(request, response);
             } else {
                 request.getRequestDispatcher("error.jsp").forward(request, response);
