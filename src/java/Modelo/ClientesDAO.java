@@ -8,10 +8,6 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- *
- * @author Usuario
- */
 public class ClientesDAO extends Conexion{
     Connection con=getConexion();
     PreparedStatement ps;

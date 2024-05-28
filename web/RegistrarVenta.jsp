@@ -13,13 +13,81 @@
                     display: none;
                 }
             }
+            body {
+                background-color: #f8f9fa;
+            }
+
+            .container {
+                max-width: 1200px;
+                margin: 20px auto;
+            }
+
+            .card {
+                background-color: #ffffff;
+                border-radius: 10px;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            }
+
+            .btn-primary, .btn-warning, .btn-danger, .btn-success {
+                border-radius: 20px;
+                padding: 10px 20px;
+                font-weight: bold;
+            }
+
+            .btn-primary {
+                background-color: #2d8fd5;
+                border-color: #2d8fd5;
+            }
+
             .btn-primary:hover {
                 background-color: #1c6ca4;
                 border-color: #1c6ca4;
             }
-            .btn-primary {
+
+            .btn-warning {
+                background-color: #ffc107;
+                border-color: #ffc107;
+            }
+
+            .btn-warning:hover {
+                background-color: #e0a800;
+                border-color: #e0a800;
+            }
+
+            .btn-danger {
+                background-color: #dc3545;
+                border-color: #dc3545;
+            }
+
+            .btn-danger:hover {
+                background-color: #b02a37;
+                border-color: #b02a37;
+            }
+            
+            .btn-success{
+                background-color: #009975;
+                border-color: #009975;
+            }
+            
+            .btn-success:hover{
+                background-color: #08554c;
+                border-color: #08554c;
+            }
+            
+            .btn-outline-primary{
+                background-color: #ffffff;
+                border-color: #2d8fd5;
+                color: #2d8fd5;
+            }
+            
+            .btn-outline-primary:hover{
                 background-color: #2d8fd5;
                 border-color: #2d8fd5;
+               color: #ffffff;
+            }
+
+            .table th, .table td {
+                vertical-align: middle;
             }
         </style>
     </head>
@@ -137,7 +205,7 @@
                                     <a href="Controlador?menu=NuevaVenta&accion=GenerarVenta" onclick="print()" class="btn btn-success me-2">Generar Venta</a>
                                 </c:otherwise>
                             </c:choose>
-                            <a href="Controlador?menu=NuevaVenta&accion=Cancelar" class="btn btn-danger me-2 mt-2 mt-sm-0">Cancelar</a>
+                            <a href="Controlador?menu=NuevaVenta&accion=Cancelar" class="btn btn-danger">Cancelar</a>
                         </div>
                         <div class="row g-3 align-items-center ms-auto justify-content-end">
                             <div class="col-auto">

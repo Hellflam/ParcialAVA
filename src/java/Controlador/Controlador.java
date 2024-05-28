@@ -12,6 +12,7 @@ import Modelo.VentaDAO;
 import java.io.IOException;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServlet;
+import jakarta.servlet.http.HttpSession;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import java.util.ArrayList;
@@ -54,6 +55,16 @@ public class Controlador extends HttpServlet {
         String menu = request.getParameter("menu");
         String accion = request.getParameter("accion");
         if (menu.equals("Principal")) {
+            switch (accion) {
+                case "Salir":
+                    HttpSession misesion = request.getSession();
+                    misesion.removeAttribute("user");
+                    misesion.invalidate();
+                    request.getRequestDispatcher("index.jsp").forward(request, response);
+                    break;
+                default:
+                    throw new AssertionError();
+            }
             request.getRequestDispatcher("Principal.jsp").forward(request, response);
         }
         if (menu.equals("Empleado")) {
